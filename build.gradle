@@ -1,6 +1,6 @@
 buildscript {
     repositories {
-      mavenCentral()
+        mavenCentral()
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.0.2.RELEASE")
@@ -8,10 +8,11 @@ buildscript {
     }
 }
 
-version = '0.0.1-SNAPSHOT'
-
 apply plugin: 'java'
 apply plugin: 'spring-boot'
+apply plugin: 'idea'
+
+version = '0.0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
@@ -20,3 +21,11 @@ repositories {
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
 }
+
+idea {
+    module {
+        inheritOutput = false
+        outputDir = file("$buildDir/classes/main/")
+    }
+}
+
