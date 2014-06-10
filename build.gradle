@@ -24,7 +24,7 @@ dependencies {
 
 idea {
     module {
-        inheritOutput = false
+        inheritOutputDirs = false
         outputDir = file("$buildDir/classes/main/")
     }
 }
