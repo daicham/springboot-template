@@ -12,6 +12,7 @@ apply plugin: 'java'
 apply plugin: 'spring-boot'
 apply plugin: 'idea'
 apply plugin: 'eclipse'
+apply plugin: 'checkstyle'
 
 version = '0.0.1-SNAPSHOT'
 
@@ -34,3 +35,8 @@ idea {
     }
 }
 
+// Checkstyle settings
+checkstyle {
+    ignoreFailures = true
+    sourceSets = [sourceSets.main]
+}
