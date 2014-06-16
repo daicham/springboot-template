@@ -8,3 +8,6 @@ deployment:
     branch: master
     commands:
       - gradle bootRepackage
+test:
+  override:
+    - gradle check test
