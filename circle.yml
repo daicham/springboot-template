@@ -11,3 +11,5 @@ deployment:
 test:
   override:
     - gradle check test
+  post:
+    - mv build/reports build/libs/*.jar $CIRCLE_ARTIFACTS/
