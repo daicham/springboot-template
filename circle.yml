@@ -13,3 +13,8 @@ test:
     - gradle check test
   post:
     - mv build/reports $CIRCLE_ARTIFACTS
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: infinite-taiga-6214
