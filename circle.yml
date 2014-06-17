@@ -12,4 +12,4 @@ test:
   override:
     - gradle check test
   post:
-    - mv build/reports build/libs/*.jar $CIRCLE_ARTIFACTS/
+    - mv build/reports $CIRCLE_ARTIFACTS
