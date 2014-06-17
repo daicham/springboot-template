@@ -40,3 +40,5 @@ checkstyle {
     ignoreFailures = true
     sourceSets = [sourceSets.main]
 }
+
+task stage(dependsOn: ['clean', 'bootRepackage'])
