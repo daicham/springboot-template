@@ -3,11 +3,6 @@ machine:
     Asia/Tokyo
   java:
     version: oraclejdk8
-deployment:
-  production:
-    branch: master
-    commands:
-      - gradle bootRepackage
 test:
   override:
     - gradle check test
