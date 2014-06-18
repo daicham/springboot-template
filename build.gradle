@@ -14,7 +14,7 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'checkstyle'
 
-// User Difined Dynamic Properties
+// User Defined Dynamic Properties
 ext {
     javaVersion = 1.8
     defaultEncoding = 'UTF-8'
@@ -23,7 +23,7 @@ ext {
 // App Version
 version = '0.0.1-SNAPSHOT'
 
-// Dependencies Settings
+// Dependency Settings
 repositories {
     mavenCentral()
 }
