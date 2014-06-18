@@ -14,12 +14,19 @@ apply plugin: 'idea'
 apply plugin: 'eclipse'
 apply plugin: 'checkstyle'
 
+// User Difined Dynamic Properties
+ext {
+    javaVersion = 1.8
+    defaultEncoding = 'UTF-8'
+}
+
+// App Version
 version = '0.0.1-SNAPSHOT'
 
+// Dependencies Settings
 repositories {
     mavenCentral()
 }
-
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web")
     compile("com.fasterxml.jackson.core:jackson-databind") 
@@ -29,6 +36,12 @@ dependencies {
     compile("postgresql:postgresql:9.1-901.jdbc4") // for heroku
 }
 
+// Compile Settings
+sourceCompatibility = javaVersion
+targetCompatibility = javaVersion
+[compileJava, compileTestJava]*.options*.encoding = defaultEncoding
+
+// IDE Settings
 idea {
     module {
         inheritOutputDirs = false
@@ -36,7 +49,7 @@ idea {
     }
 }
 
-// Checkstyle settings
+// Checkstyle Settings
 checkstyle {
     ignoreFailures = true
     sourceSets = [sourceSets.main]
