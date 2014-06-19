@@ -33,8 +33,9 @@ dependencies {
     compile("com.fasterxml.jackson.core:jackson-databind") 
     compile("org.springframework.boot:spring-boot-starter-thymeleaf")
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
-    compile("com.h2database:h2")  // for local
-    compile("postgresql:postgresql:9.1-901.jdbc4") // for heroku
+    runtime("com.h2database:h2")  // for local
+    runtime("postgresql:postgresql:9.1-901.jdbc4") // for heroku
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
 
 // Compile Settings
