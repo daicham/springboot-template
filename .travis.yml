@@ -5,6 +5,7 @@ deploy:
   provider: heroku
   api_key:
     secure: KOME6Zl4AQTAhCAfP8t6IiYYniPCkF3DVm0DNJx63D1GEM5IFgsVSnSn6uccSti9M+IqVOsJDCk3BZC185s87yZu9jcx0sBwY3/BUYjaUsUz/CTyVPOCWM5wvL45ey0xwt6z3FTtcwJu6oSijcldzxTEiT5qbOTv5AtRLj5Egu4=
+  strategy: git
   app: infinite-taiga-6214
   on:
     repo: daicham/springboot-template
