@@ -5,7 +5,7 @@ machine:
     version: oraclejdk8
 test:
   override:
-    - gradle check test
+    - gradle check
   post:
     - mv build/reports $CIRCLE_ARTIFACTS
 deployment:
